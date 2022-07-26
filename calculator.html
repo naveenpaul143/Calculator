@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Calculator By Naveen_Paul</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <br><br>
+        <h1><font color="red"><b>N</b></font>aveen <font color="red"><b>P</b></font>aul</h1>
+        <br><br>
+        <div class="container">
+            
+            <div class="calculator">
+                
+                <input type="text" placeholder="0" id="output-Screen">
+                <button onclick="cl()"id="bg5">C</button>
+                <button onclick="del()"id="bg6">DEL</button>
+                <button onclick="display('%')" id="bg7">%</button>
+                <button onclick="display('/')" id="bg1">/</button>
+                <button onclick="display('7')">7</button>
+                <button onclick="display('8')">8</button>
+                <button onclick="display('9')">9</button>
+                <button onclick="display('*')" id="bg2">*</button>
+                <button onclick="display('4')">4</button>
+                <button onclick="display('5')">5</button>
+                <button onclick="display('6')">6</button>
+                <button onclick="display('-')" id="bg3">-</button>
+                <button onclick="display('1')">1</button>
+                <button onclick="display('2')">2</button>
+                <button onclick="display('3')">3</button>
+                <button onclick="display('+')" id="bg4">+</button>
+                <button onclick="display('.')" ><b>.</b></button>
+                <button onclick="display('0')">0</button>
+                <button onclick="calculate()" class="equal">=</button>
+            </div>
+        </div>
+        <script>
+            let outpustScreen=document.getElementById("output-Screen");
+            function display(num){
+                outpustScreen.value+=num;
+            }
+           
+            function calculate(){
+                try{
+                    outpustScreen.value=eval(outpustScreen.value);
+                    
+                }catch(err){
+                    alert("Invalid");
+                }
+            } function cl(){
+                outpustScreen.value="";
+            }function del(){ 
+                outpustScreen.value =outpustScreen.value.slice(0,-1);
+            }
+           
+            
+        </script>
+        <br>  <br>
+        <h1><font color="red">C</font>alculator</h1>
+        <br>       <br>
+    </body>
+
+</html>
